@@ -1,0 +1,59 @@
+<ion-view view-title="Home">
+  <ion-content class="padding">
+
+    <div class="card">
+      <div class="item item-text-wrap text-center">
+        <b class="title">RECENTLY PLAYED</b>
+      </div>
+    
+      <div class="item text-center">
+        <hscroller>
+          <a href="#/tab/channels/aChannel">
+            <hcard ng-repeat="item in items" index="{{$index}}" desc="{{item.channel}}" image="{{item.image}}"></hcard>
+          </a>
+        </hscroller>
+      </div>
+    </div>
+
+    <br>
+    <div class="list card">
+      <div class="item item-text-wrap text-center">
+        <b class="title">TOP TRACKS</b>
+      </div>
+      <div class="item item-avatar item-icon-right" on-hold="songInfo()">
+        <img src="img/adele_hello.jpg">
+        <a ng-click="playClick()" ng-class="{'icon ion-pause': playing, 'icon ion-play': !playing}"></a>
+          <b>Hello</b>
+          <p>Adele</p>
+      </div>
+      <div class="item item-icon-right" on-hold="songInfo()">
+        <a ng-click="voted = !voted" ng-class="{'icon ion-arrow-up-c': voted, 'icon ion-arrow-up-c no-vote': !voted}"></a>
+          <b>Stitches</b>
+          Shawn Medes
+          <p>99,710</p>
+      </div>
+      <div class="item item-icon-right" on-hold="songInfo()">
+        <a ng-click="voted = !voted" ng-class="{'icon ion-arrow-up-c': voted, 'icon ion-arrow-up-c no-vote': !voted}"></a>
+          <b>Love Yourself</b>
+          Justin Bieber
+          <p>85,591</p>
+      </div>
+      <div class="item item-icon-right" on-hold="songInfo()">
+        <a ng-click="voted = !voted" ng-class="{'icon ion-arrow-up-c': voted, 'icon ion-arrow-up-c no-vote': !voted}"></a>
+          <b>Drag Me Down</b>
+          One Direction
+          <p>48,442</p>
+      </div>
+    </div>
+
+  </ion-content>
+  
+  <div class="float-button" ng-click="addSong()">
+    <span class="height-fix">
+      <a class="content">
+        <i class="ion-plus-round"> </i>
+      </a>
+    </span>
+  </div>
+
+</ion-view>

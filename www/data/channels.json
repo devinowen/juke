@@ -1,0 +1,15 @@
+[
+        {"channel": "Charts", "image": "img/ccimages/concert.jpg"},
+        {"channel": "Pop", "image": "img/ccimages/eq.jpg"},
+        {"channel": "Hip Hop", "image": "img/ccimages/mic.jpg"},
+        {"channel": "Rock", "image": "img/ccimages/electricguitar.jpg"},
+        {"channel": "Electronic", "image": "img/ccimages/dj.jpg"},
+        {"channel": "Folk", "image": "img/ccimages/banjoplayer.jpg"},
+        {"channel": "Blues", "image": "img/ccimages/bluesguitar.jpg"},
+        {"channel": "Country", "image": "img/ccimages/countryguitar.jpg"},
+        {"channel": "Jazz", "image": "img/ccimages/saxophone.jpg"},
+        {"channel": "RnB", "image": "img/ccimages/drums.jpg"},
+        {"channel": "Funk", "image": "img/ccimages/bass.jpg"},
+        {"channel": "Classical", "image": "img/ccimages/cello.jpg"},
+        {"channel": "Spoken", "image": "img/ccimages/mic3.jpg"}
+    ]

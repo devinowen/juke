@@ -1,0 +1,16 @@
+<ion-view view-title="Channels">
+  <ion-content class="padding">
+
+    <div ng-repeat="channel in channels">
+      <div class="item text-center">
+        <h2><b>{{channel.channel}}</b></h2>
+        <hscroller>
+          <a href="#/tab/channels/aChannel">
+            <hcard ng-repeat="channel in channels" index="{{$index}}" desc="{{channel.channel}}" image="{{channel.image}}"></hcard>
+          </a>
+        </hscroller>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,36 @@
+<ion-view view-title="Channel" show-tabs="true">
+  <ion-content class="padding">
+
+    <div class="card">
+      <div class="item item-text-wrap text-center">
+        <b class="title">CHARTS</b>
+      </div>
+    </div>
+
+    <div class="list card">
+      <div class="item item-avatar item-icon-right" on-hold="songInfo()">
+        <img src="img/DNCEcover.jpg">
+        <a ng-click="playClick()" ng-class="{'icon ion-pause': playing, 'icon ion-play': !playing}"></a>
+          <b>Cake by the Ocean</b>
+          <p>DNCE</p>
+      </div>
+
+      <div class="item item-icon-right" ng-repeat="song in songs" on-hold="songInfo()">
+        <a ng-click="voted = !voted" ng-class="{'icon ion-arrow-up-c': voted, 'icon ion-arrow-up-c no-vote': !voted}"></a>
+          <b>{{song.song}}</b>
+          {{song.artist}}
+          <p>{{song.votes}}</p>
+      </div>
+    </div>
+
+  </ion-content>
+
+  <div class="float-button" ng-click="addSong()">
+    <span class="height-fix">
+      <a class="content">
+        <i class="ion-plus-round"> </i>
+      </a>
+    </span>
+  </div>
+
+</ion-view>

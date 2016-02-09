@@ -1,0 +1,64 @@
+<ion-view view-title="Now Playing">
+  <ion-content class="padding">
+
+    <div class="card">
+      <div class="item item-text-wrap">
+        Current Channel: <b class="title">CHARTS</b>
+      </div>
+    </div>
+
+    <div class="list card">
+      <div class="item item-avatar item-icon-right" on-hold="songInfo()">
+        <img src="img/DNCEcover.jpg">
+        <a ng-click="playClick()" ng-class="{'icon ion-pause': playing, 'icon ion-play': !playing}"></a>
+          <b>Cake by the Ocean</b>
+          <p>DNCE</p>
+      </div>
+
+      <div class="item item-image">
+        <img src="img/DNCEcover.jpg">
+      </div>
+
+      <div class="item">
+        <div class="row">
+          <div class="col">
+            <b>Added by</b>
+            <p>USER</p>
+          </div>
+          <div class="col">
+            <p class="text-center"><img src="img/emoji/happy.png">*5</p>
+            <p class="text-center"><img src="img/emoji/heart.png">*3 <img src="img/emoji/unsure.png">*1</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="item range">
+        <i class="icon ion-volume-low"></i>
+        <input type="range" name="volume">
+        <i class="icon ion-volume-high"></i>
+      </div> -->
+    </div>
+
+    <div class="list card">
+      <div class="item item-text-wrap text-center">
+        <b class="title">NEXT UP</b>
+      </div>
+      <div class="item item-icon-right" ng-repeat="song in songs" on-hold="songInfo()">
+        <a ng-click="voted = !voted" ng-class="{'icon ion-arrow-up-c': voted, 'icon ion-arrow-up-c no-vote': !voted}"></a>
+          <b>{{song.song}}</b>
+          {{song.artist}}
+          <p>{{song.votes}}</p>
+      </div>
+    </div>
+
+  </ion-content>
+
+  <div class="float-button" ng-click="addSong()">
+    <span class="height-fix">
+      <a class="content">
+        <i class="ion-plus-round"> </i>
+      </a>
+    </span>
+  </div>
+
+</ion-view>

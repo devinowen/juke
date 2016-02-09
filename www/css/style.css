@@ -1,0 +1,50 @@
+
+/* Floating 'add song' button */
+.float-button {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width: 20px;
+  padding: 25px;
+  font-size: 40px;
+  background: orange;
+  position: fixed;
+  top: 75px;
+  right: 20px;
+  z-index: 9999;
+  box-shadow: 1px 4px 15px #888888;
+}
+
+.float-button .height_fix {
+  margin-top: 100%;
+}
+
+.float-button .content {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  margin-top: -20px; /* This must be half the font size */
+  color: white;
+}
+
+/* Upvote arrows and play/pause button */
+.ion-arrow-up-c {
+    text-decoration: none;
+}
+
+.no-vote {
+    color: gray;
+}
+
+.ion-play, .ion-pause {
+    color: #66cc33;
+    text-decoration: none;
+}
+
+/* Titles */
+.title {
+    color: #4a87ee;
+}
